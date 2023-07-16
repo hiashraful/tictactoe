@@ -4,15 +4,8 @@ import Board from './components/board';
 
 function App() {
   return (
-    <>
-      <div className="app">
-        <button type="button" onClick={btnClick}>
-          Click me
-        </button>
-        <h2>{counter}</h2>
-      </div>
-    </>
-  );
+   <Board/>  
+  )
 }
 
 export default App;
