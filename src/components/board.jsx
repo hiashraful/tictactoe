@@ -5,28 +5,28 @@ const Board = () => {
   const [isXNext, setIsXNext] = useState(false);
 
   const handleSquareClick = clickedPosition => {
-    if(squares[clickedPosition]){
+    if (squares[clickedPosition]) {
       return;
     }
-    setSquares((currentSquares) => {
+    setSquares(currentSquares => {
       return currentSquares.map((squareValue, position) => {
-        if (clickedPosition === position){
+        if (clickedPosition === position) {
           return isXNext ? 'X' : 'O';
         }
         return squareValue;
-      })
-    })
+      });
+    });
     setIsXNext(currentIsXNext => !currentIsXNext);
-  }
+  };
 
   const renderSquare = position => {
     return (
       <Square
-      value={squares[position]}
-      onClick={() => handleSquareClick(position)}
+        value={squares[position]}
+        onClick={() => handleSquareClick(position)}
       />
-    )
-  }
+    );
+  };
   return (
     <div className="board">
       <div className="board-row">
