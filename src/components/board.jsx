@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Square from './square';
+import Square from './Square';
 const Board = ({ squares, handleSquareClick }) => {
   const renderSquare = position => {
     return (
