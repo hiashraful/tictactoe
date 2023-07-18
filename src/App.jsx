@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Board from './components/Board';
 import { calculateWinner } from './winner';
 import StatusMessage from './components/statusMessage';
+import History from './components/History';
 
 function App() {
   const [squares, setSquares] = useState(Array(9).fill(null));
@@ -28,6 +29,7 @@ function App() {
     <div className="app">
       <StatusMessage winner={winner} isXNext={isXNext} squares={squares} />
       <Board squares={squares} handleSquareClick={handleSquareClick} />
+      <History/>
     </div>
   );
 }
