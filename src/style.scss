@@ -3,8 +3,8 @@ $orange: #ffc72a;
 $blue: #4c43d4;
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: $blue;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0c3b32;
   color: #fff;
   padding: 0;
   margin: 0;
@@ -21,7 +21,7 @@ button {
 
 .app {
   position: relative;
-  top: 30vh;
+  // top: 30vh;
   font-size: 20px;
   display: flex;
   flex-direction: column;
@@ -35,14 +35,14 @@ button {
 .text-orange {
   color: $orange;
 }
-.history-heading{
-  position: absolute;
-  left: 69%;
-}
+// .history-heading{
+//   position: absolute;
+//   left: 69%;
+// }
 .history-wrapper {
-  position: absolute;
-  left: 65%;
-  top: 60px;
+  // position: absolute;
+  // left: 65%;
+  // top: 60px;
   width: 300px;
   text-align: center;
   margin-bottom: 20px;
@@ -54,7 +54,7 @@ button {
       list-style: none;
       text-align: left;
       &:before {
-        // content: '';
+        content: '';
         border-radius: 50%;
         display: inline-block;
         height: 5px;
