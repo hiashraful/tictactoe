@@ -4,11 +4,12 @@ import Board from './components/Board';
 import { calculateWinner } from './winner';
 import StatusMessage from './components/statusMessage';
 import History from './components/History';
+import Reset from './components/Reset';
+
+const NEW_GAME = [{ squares: Array(9).fill(null), isXNext: false }];
 
 function App() {
-  const [history, setHistory] = useState([
-    { squares: Array(9).fill(null), isXNext: false },
-  ]);
+  const [history, setHistory] = useState(NEW_GAME);
   const [currentMove, setCurrentMove] = useState(0);
   const gamingBoard = history[currentMove];
   const winner = calculateWinner(gamingBoard.squares);
@@ -19,8 +20,8 @@ function App() {
     setHistory(currentHistory => {
       const isTraversing = currentMove + 1 !== currentHistory.length;
       const lastGamingState = isTraversing
-      ? currentHistory[currentMove]
-      : currentHistory[currentHistory.length - 1]
+        ? currentHistory[currentMove]
+        : currentHistory[currentHistory.length - 1];
 
       const nextSquaresState = lastGamingState.squares.map(
         (squareValue, position) => {
@@ -31,10 +32,10 @@ function App() {
         }
       );
 
-      const base = isTraversing
+      const baseHistory = isTraversing
         ? currentHistory.slice(0, currentHistory.indexOf(lastGamingState) + 1)
         : currentHistory;
-      return base.concat({
+      return baseHistory.concat({
         squares: nextSquaresState,
         isXNext: !lastGamingState.isXNext,
       });
@@ -53,6 +54,12 @@ function App() {
         squares={gamingBoard.squares}
         handleSquareClick={handleSquareClick}
       />
+      <Reset
+        NEW_GAME={NEW_GAME}
+        setHistory={setHistory}
+        setCurrentMove={setCurrentMove}
+      />
+      <h3 className="history-heading">Game History</h3>
       <History history={history} moveTo={moveTo} currentMove={currentMove} />
     </div>
   );

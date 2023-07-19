@@ -35,10 +35,14 @@ button {
 .text-orange {
   color: $orange;
 }
-
+.history-heading{
+  position: absolute;
+  left: 69%;
+}
 .history-wrapper {
   position: absolute;
   left: 65%;
+  top: 60px;
   width: 300px;
   text-align: center;
   margin-bottom: 20px;
