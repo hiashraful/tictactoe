@@ -66,6 +66,7 @@ function App() {
         fontWeight: '100'
       }}>Game History</h4>
       <History history={history} moveTo={moveTo} currentMove={currentMove} />
+      <div className="bg-balls"></div>
     </div>
   );
 }
