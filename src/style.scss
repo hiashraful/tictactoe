@@ -102,6 +102,8 @@ button {
 .board {
   margin-top: 20px;
   .board-row {
+    
+    
     display: flex;
     flex-direction: row;
     border-bottom: 2px solid #fff;
@@ -109,6 +111,7 @@ button {
       border-bottom: none;
     }
     .square {
+      font-weight: 700;
       width: 80px;
       height: 80px;
       border-right: 2px solid #fff;
