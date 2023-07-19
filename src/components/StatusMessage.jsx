@@ -17,7 +17,7 @@ const StatusMessage = ({ winner, gamingBoard }) => {
       return (
         <>
           <span className="text-orange">X</span> &{' '}
-          <span className="text-green">X</span> tied the game
+          <span className="text-green">O</span> tied the game
         </>
       );
     }
