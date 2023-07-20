@@ -19,6 +19,13 @@ button {
   }
 }
 
+.heading{
+  font-family: 'Press Start 2P', sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+  word-spacing: -25px;
+}
+
 .app {
   position: relative;
   // top: 30vh;
@@ -35,14 +42,12 @@ button {
 .text-orange {
   color: $orange;
 }
-// .history-heading{
-//   position: absolute;
-//   left: 69%;
-// }
+
 .history-wrapper {
-  // position: absolute;
-  // left: 65%;
-  // top: 60px;
+  background-color: #476350;
+  min-height: 200px;
+  border-radius: 10px;
+  padding: 20px 0px;
   width: 300px;
   text-align: center;
   margin-bottom: 20px;
@@ -101,9 +106,12 @@ button {
 
 .board {
   margin-top: 20px;
+  margin-top: 20px;
+  background-color: rgb(54, 57, 245);
+  padding: 0px;
+  border: 2px solid #fff;
+  border-radius: 15px;
   .board-row {
-    
-    
     display: flex;
     flex-direction: row;
     border-bottom: 2px solid #fff;
